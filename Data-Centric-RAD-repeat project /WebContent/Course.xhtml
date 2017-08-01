@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Course</title>
+	<f:metadata>
+		<f:event listener="#{CourseController.load()}"
+			type="preRenderView" />
+	</f:metadata>
+</h:head>
+<h:body>
+	<h:form>
+
+		<h:commandButton value="Add Course" action="addCourse" />
+		<br />
+		<br />
+		<h:dataTable value="#{CourseController.Course}" var="m" border="2">
+		<h:column>
+			<f:facet name="header">College ID</f:facet>
+			#{m.colID}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Course Name</f:facet>
+			#{m.cID}
+		</h:column>
+		<h:column>	
+			<f:facet name="header">Name</f:facet>
+			#{m.name}
+		</h:column>
+		</h:dataTable>
+		<br />
+		<h:link value="Home" outcome="main" />
+	</h:form>
+</h:body>
+</html>
+
+
+
+
+

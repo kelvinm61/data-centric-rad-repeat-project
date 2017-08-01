@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Add College</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:messages styleClass="errorMessage" globalOnly="true" />
+		<h:message for="ID" styleClass="errorMessage" />
+		<br />
+      	College code: <h:inputText value="#{college.ID}" id="ID"
+			p:placeholder="College ID" required="true" 
+			requiredMessage="ID mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="name"/> 
+		<br />
+      	College name: <h:inputText value="#{college.name}" id="name"
+			p:placeholder="College name" required="true" 
+			requiredMessage="Name mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="Address"/> 
+		<br />
+		College Address: <h:inputText value="#{College.Address}" id="Address"
+			p:placeholder="College Address" required="true" 
+			requiredMessage="Address mandatory" />
+		<br />
+		<h:commandButton value="Add"
+			action="#{collegeController.add(college)}" />
+		<br />
+		<br />
+		<h:link value="Home" outcome="main" /> <br />
+		<h:link value="Colleges" outcome="College" />
+	</h:form>
+</h:body>
+</html>

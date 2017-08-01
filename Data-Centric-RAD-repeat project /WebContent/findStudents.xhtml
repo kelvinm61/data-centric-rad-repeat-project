@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Find All Students</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:messages styleClass="errorMessage" globalOnly="true" />
+		<h:message for="first_name" styleClass="errorMessage" />
+		<br />
+		First Name: <h:selectOneMenu value="#{Student.first_name}">
+		<h:inputText value="#{Student.first_name}" id="first_name"
+			p:placeholder="first_name" required="false" />
+		<h:message styleClass="errorMessage" for="first_name"/> 
+		<br />
+		Last Name: <h:selectOneMenu value="#{Student.last_name}">
+		<h:inputText value="#{Student.last_name}" id="last_name"
+			p:placeholder="last_name" required="false" />
+		<h:message styleClass="errorMessage" for="last_name"/> 
+		<br />
+		<br />
+		<h:commandButton value="Find"
+			action="#{StudentController.add(Student)}" />
+		<br />
+		<br />
+		<h:link value="Home" outcome="main" /> <br />
+		<h:link value="Students" outcome="Student" />
+        
+        
+	</h:form>
+</h:body>
+</html>
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Add Student</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:messages styleClass="errorMessage" globalOnly="true" />
+		<h:message for="sID" styleClass="errorMessage" />
+		<br />
+      	Student ID: <h:inputText value="#{student.cID}" id="cID"
+			p:placeholder="Student ID" required="true" 
+			requiredMessage="cID mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="colID"/> 
+		<br />
+      	College ID: <h:inputText value="#{student.colID}" id="colID"
+			p:placeholder="College ID" required="true" 
+			requiredMessage="College ID mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="cID"/> 
+		<br />
+		Course ID: <h:inputText value="#{student.cID}" id="cID"
+			p:placeholder="Course ID" required="true" 
+			requiredMessage="Course ID mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="first_name"/> 
+		<br />
+		First name: <h:inputText value="#{student.first_name}" id="first_name"
+			p:placeholder="First_name" required="true" 
+            requiredMessage="First Name mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="last_name"/> 
+		<br />
+		Last name: <h:inputText value="#{student.last_name}" id="last_namee"
+			p:placeholder="last_name" required="true" 
+			requiredMessage="Last Name mandatory" />
+		<br />
+		<h:message styleClass="errorMessage" for="Address"/> 
+		<br />
+		Address: <h:inputText value="#{student.Address}" id="Address"
+			p:placeholder="Address" required="true" 
+            requiredMessage="Address mandatory" />
+		<br />
+		<h:commandButton value="Add"
+			action="#{StudentController.add(Student)}" />
+		<br />
+		<br />
+		<h:link value="Home" outcome="main" /> <br />
+		<h:link value="Students" outcome="Student" />
+	</h:form>
+</h:body>
+</html>

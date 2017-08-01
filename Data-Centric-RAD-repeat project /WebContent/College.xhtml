@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>College</title>
+	<f:metadata>
+		<f:event listener="#{CollegeController.load()}"
+			type="preRenderView" />
+	</f:metadata>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:commandButton value="Add College" action="addCol" />
+		<br />
+		<br />
+		<h:dataTable value="#{CollegeController.College}" var="m" border="2">
+		<h:column>
+			<f:facet name="header">College ID</f:facet>
+			#{m.ID}
+		</h:column>
+		<h:column>
+			<f:facet name="header">College Name</f:facet>
+			#{m.name}
+		</h:column>
+		<h:column>	
+			<f:facet name="header">College Address</f:facet>
+			#{m.Address}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Action</f:facet>
+			 <a href="updateCol.xhtml">Update</a><br />
+			 <h:commandLink action = "#{CollegeController.delete(m)}" 
+			 value = "Delete" onclick = "return confirm('Do you want to delete this College?')">
+			 </h:commandLink>
+		</h:column>
+	</h:dataTable>
+	<br />
+	<h:link value="Home" outcome="main" />
+	</h:form>
+</h:body>
+</html>
