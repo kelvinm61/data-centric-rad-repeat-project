@@ -162,7 +162,7 @@ public class DAO {
 	} // end getStudent
 	
 	// Generate the Address of a Student to a list
-	public ArrayList<Student> getVehicleDetails(Student v) throws SQLException {
+	public ArrayList<Student> getStudentDetails(Student v) throws SQLException {
 
 		ArrayList<Student> Student = new ArrayList<Student>();
 
