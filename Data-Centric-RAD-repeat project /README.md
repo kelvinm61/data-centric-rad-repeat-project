@@ -3,7 +3,7 @@ Creating College database with jsf front end in eclipse for my autumn repeat exa
 
 For this project im writing a JSF/JDBC dynamic web application that queries and updates a MySQL database.
 Pages created are:
-main page
+##main page
 manage colleges page
 manage courses page
 manage students page
