@@ -1,13 +1,17 @@
-# Data-Centric-RAD-Project-2016
+# Data-Centric-RAD- Repeat Project-2017
+Creating College database with jsf front end in eclipse for my autumn repeat exam of data centric RAD.
 
-~~Main Page~~ <br/>
-~~Manage Manufacturer Page~~<br/>
-~~Manage Models Page~~<br/>
-~~Manage Vehicles Page~~<br/>
-Full Vehicle Details Page - not working<br/>
-Find All Vehicles Page - not working<br/>
-~~Add Manufacturer Page~~<br/>
-~~Add Model Page~~<br/>
-~~Add Vehicle Page~~<br/>
-~~Update Manufacturer Page~~<br/>
-~~Delete Manufacturer Link~~<br/>
+For this project im writing a JSF/JDBC dynamic web application that queries and updates a MySQL database.
+Pages created are:
+main page
+manage colleges page
+manage courses page
+manage students page
+full student details page
+find all students page
+add college page
+add course page
+add student page
+update college page
+delete college link
+
